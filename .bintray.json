@@ -11,7 +11,7 @@
 	},
 	"files": [
 		{
-			"includePattern": "./(.*\\amd64.deb)",
+			"includePattern": "./(.*\_amd64\\.deb)",
 			"uploadPattern": "pool/main/b/borgbackup/$1",
 			"matrixParams": {
 				"override": 1,
@@ -21,7 +21,7 @@
 			}
 		},
         {
-			"includePattern": "./(.*\\i386.deb)",
+			"includePattern": "./(.*\_i386\\.deb)",
 			"uploadPattern": "pool/main/b/borgbackup/$1",
 			"matrixParams": {
 				"override": 1,
