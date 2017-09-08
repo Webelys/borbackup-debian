@@ -3,7 +3,7 @@
 		"name": "borgbackup-bin",
 		"repo": "debian",
 		"subject": "webelys",
-		"vcs_url": "https://github.com/Webelys/borbackup-bin.git",
+		"vcs_url": "https://github.com/Webelys/borbackup-debian.git",
 		"licenses": ["GPL-3.0"]
 	},
 	"version": {
