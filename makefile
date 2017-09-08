@@ -12,7 +12,7 @@ clean:
 
 prepare:
 	mkdir -p src/usr/bin
-	if [ ! -e src/usr/bin/borg ]; then  cd src/usr/bin/ ; ln -s borgbackup borg ; fi
+	if [ ! -e src/usr/bin/borg ]; then  cd src/usr/bin/ ; ln -s /usr/bin/borgbackup borg ; fi
 
 package64: prepare
 	wget $(BIN64_URL) -qO src/usr/bin/borgbackup
