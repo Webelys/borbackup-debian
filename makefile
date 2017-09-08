@@ -16,6 +16,7 @@ prepare:
 
 package64: prepare
 	wget $(BIN64_URL) -qO src/usr/bin/borgbackup
+	chmod +x src/usr/bin/borgbackup
 	fpm -s dir -t deb \
 		-n $(NAME) \
 		-v $(VERSION) \
@@ -28,6 +29,7 @@ package64: prepare
 		
 package32: prepare
 	wget $(BIN32_URL) -qO src/usr/bin/borgbackup
+	chmod +x src/usr/bin/borgbackup
 	fpm -s dir -t deb \
 		-n $(NAME) \
 		-v $(VERSION) \
