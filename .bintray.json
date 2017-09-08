@@ -1,0 +1,35 @@
+{
+	"package": {
+		"name": "borgbackup-bin",
+		"repo": "debian",
+		"subject": "webelys",
+		"vcs_url": "https://github.com/Webelys/borbackup-bin.git",
+		"licenses": ["GPL-3.0"]
+	},
+	"version": {
+		"name": "lasted"
+	},
+	"files": [
+		{
+			"includePattern": "./(.*\\amd64.deb)",
+			"uploadPattern": "pool/main/b/borgbackup/$1",
+			"matrixParams": {
+				"override": 1,
+				"deb_distribution": "squeeze,wheezy",
+				"deb_component": "main",
+				"deb_architecture": "amd64"
+			}
+		},
+        {
+			"includePattern": "./(.*\\i386.deb)",
+			"uploadPattern": "pool/main/b/borgbackup/$1",
+			"matrixParams": {
+				"override": 1,
+				"deb_distribution": "squeeze,wheezy",
+				"deb_component": "main",
+				"deb_architecture": "i386"
+			}
+		}        
+	],
+	"publish": true
+}

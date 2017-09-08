@@ -1,0 +1,14 @@
+language : bash
+before_install:
+    - sudo apt-get -qq update
+    - sudo apt-get install -y ruby ruby-dev rubygems-integration build-essential po-debconf
+    - gem install --no-ri --no-rdoc fpm
+install: 
+    - make
+deploy:
+    - provider: bintray
+      skip_cleanup: true
+      file: .bintray.json
+      user: camlafit
+      key:
+          secure: "n9JvadkYhtgCwgIaDhLAUzFrlSYmg0l6GVnSFcBPxb7aE4JDNW3YC1DzLkwYPiCwYlURD5YDckmxcegfKidNWL92TWFBcpmn94GHfUai+LyL3n7rioQUTWGFMSC2p1zHAZoj2ZKu80OAm3wPp2ZQUAsejnX3tmIaeoQ4J+irC9rrr/KdthJqPUKbJsp9bd1SFPLwFclW5XKmA8c95/3IXp9HiMs6nHEHpI1gox+jdu7P56PYiZuufXRrPyWvctMZ5eHDlvEIby0N1CYsFlTZshVzq3sq9X5glJWbY5hxdi1m9zZlTtM60MwXg+VFLLhBAPF15FwXwVmGbCslifWvocvsAcNeJ3DMoBPQvt9U5SfekPUNOIe+1Y5SA9SI9YocV4dsloENq5XT2vfPddZ2dFiLYR6Ez9/lm03XEFqQ+uBWdigeZAeexkE1FAUdb/bcDKs5A83UUyDQVeAxLnDi5VDcMy+PG11v5T9AFybodKWjAan3YmReoye1GQkgif9bZ7op58Y182WglrAmYoU/h/Jov4HbXbsW166fjSU0wsr+ktHRwhsT3aGfEbivbFVuOwV7PvgKQx2SQwJN+eCcQzAjpPl6bCHxyN7FJFxPkI6JyMF/yh2yKVi5ALXtLadw9OepkcJy+N6WjlY/ATLYxm0ZkboGS5S2RGEm0nOE1oM="
