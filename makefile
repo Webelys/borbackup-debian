@@ -33,6 +33,8 @@ package32: prepare
 	fpm -s dir -t deb \
 		-n $(NAME) \
 		-v $(VERSION) \
+		--provides borgbackup \
+		--conflicts borgbackup \
 		-m alernc@webelys.com \
 		--conflicts borgbackup \
 		--category admin \
