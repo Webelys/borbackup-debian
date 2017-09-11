@@ -21,6 +21,7 @@ package64: prepare
 		-n $(NAME) \
 		-v $(VERSION) \
 		-m alernc@webelys.com \
+		--provides borgbackup \
 		--conflicts borgbackup \
 		--category admin \
 		--architecture amd64 \
@@ -33,9 +34,8 @@ package32: prepare
 	fpm -s dir -t deb \
 		-n $(NAME) \
 		-v $(VERSION) \
-		--provides borgbackup \
-		--conflicts borgbackup \
 		-m alernc@webelys.com \
+		--provides borgbackup \
 		--conflicts borgbackup \
 		--category admin \
 		--architecture i386 \
