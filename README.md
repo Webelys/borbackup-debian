@@ -7,6 +7,7 @@ Borgbackup provide a binary to any plat-form but not debian packaging to old dis
 
 * Package is named **borgbackup-bin** as this no conflict with official debian package. 
 * Version follows official version naming.
+* Updated daily (each day travis retrieve last binary package and push them (386 and amd64) on bintray service
 
 
 # Installation
